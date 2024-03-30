@@ -8,10 +8,10 @@
 public struct SSOUser {
     
     /// this type is only for Google SSO
-    public struct GoogleToken {
-        public let accessToken: String?
-        public let idToken: String?
-    }
+//    public struct GoogleToken {
+//        public let accessToken: String?
+//        public let idToken: String?
+//    }
     
     public let id: String?
     public let name: String?
@@ -19,22 +19,23 @@ public struct SSOUser {
     public let familyName: String?
     public let email: String?
     public let ssoToken: String?
-    public let googleTokens: GoogleToken?
+//    public let googleTokens: GoogleToken?
     
     init(id: String?,
          name: String?,
          firstName: String? = nil,
          familyName: String? = nil,
          email: String?,
-         ssoToken: String?,
-         googleTokens: GoogleToken? = nil) {
+         ssoToken: String?
+//         ,googleTokens: GoogleToken? = nil
+    ) {
         self.id = id
         self.name = name
         self.firstName = firstName
         self.familyName = familyName
         self.email = email
         self.ssoToken = ssoToken
-        self.googleTokens = googleTokens
+//        self.googleTokens = googleTokens
     }
     
     init(name: String?,

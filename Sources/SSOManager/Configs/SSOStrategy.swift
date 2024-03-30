@@ -7,6 +7,6 @@
 
 public enum SSOStrategy {
     case apple
-    case google
+//    case google
     case facebook
 }
