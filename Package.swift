@@ -17,16 +17,17 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(url: "https://github.com/google/GoogleSignIn-iOS", from: Version("6.1.0")),
-        .package(url: "https://github.com/facebook/facebook-ios-sdk", from: Version("14.0.0"))
+        .package(url: "https://github.com/google/GoogleSignIn-iOS", from: Version("6.1.0"))
+//        , .package(url: "https://github.com/facebook/facebook-ios-sdk", from: Version("14.0.0"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SSOManager",
-            dependencies: [.product(name: "FacebookCore", package: "facebook-ios-sdk"),
-                           .product(name: "FacebookLogin", package: "facebook-ios-sdk"),
+            dependencies: [
+//                           .product(name: "FacebookCore", package: "facebook-ios-sdk"),
+//                           .product(name: "FacebookLogin", package: "facebook-ios-sdk"),
                            .product(name: "GoogleSignIn", package: "GoogleSignIn-iOS")]),
     ],
     swiftLanguageVersions: [.v4]
